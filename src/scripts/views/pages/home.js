@@ -1,5 +1,5 @@
 import RestaurantSource from '../../data/farest-source';
-import cardFarest from '../templates/get-farest';
+import { cardFarest } from '../templates/get-farest';
 
 const Home = {
   async render() {
