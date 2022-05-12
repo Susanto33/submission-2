@@ -113,7 +113,4 @@ const cardFarest = (resto) => `
     </div>
   `;
 
-export default {
-    restoDetail,
-    cardFarest,
-};
+export { restoDetail, cardFarest };
