@@ -17,20 +17,12 @@ const Home = {
   },
 
   async afterRender() {
-    const mainContainer = document.querySelector('#main-container');
     const listContainer = document.querySelector('#explore-restaurant');
 
-    try {
-      const data = await RestaurantSource.getRestaurantList(); // fetch restaurant list
-      data.restaurants.forEach((restaurant) => {
-        listContainer.innerHTML += cardFarest(restaurant);
-      });
-    } catch (err) {
-      console.error(err);
-
-      mainContainer.style.display = 'block';
-      listContainer.innerHTML = `Error: ${err.message}`;
-    }
+    const data = await RestaurantSource.getRestaurantList();
+    data.restaurants.forEach((restaurant) => {
+      listContainer.innerHTML += cardFarest(restaurant);
+    });
   },
 };
 
